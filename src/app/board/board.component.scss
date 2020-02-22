@@ -1,0 +1,48 @@
+.board {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: 'Ubuntu Condensed', 'Lucida Sans', sans-serif;
+      font-size: 1.3em;
+
+      margin: 5px;
+      padding: 30px;
+
+      width: 19%;
+      height: 10em;
+      border: 1px solid black;
+
+      cursor: pointer;
+      user-select: none;
+
+      &.awarded {
+        background-color: yellow;
+      }
+
+      @media only screen and (max-device-width : 1024px) {
+        & {
+          height: 18%vh;
+          font-size: small;
+          margin: 2px;
+          padding: 5px;
+          width: 18%vw;
+        }
+      }
+    }
+
+    &:nth-child(3) .cell:nth-child(3) {
+      background-color: hotpink;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<div class="container">
+  <section class="hero" [class.is-info]="bannerType === 'info'" [class.is-primary]="bannerType === 'primary'"
+    [class.is-success]="bannerType === 'success'" [class.is-warning]="bannerType === 'warning'">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          Office Bingo
+        </h1>
+        <h2 class="subtitle">
+          Good luck!
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <router-outlet></router-outlet>
+</div>
