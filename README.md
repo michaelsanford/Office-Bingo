@@ -12,3 +12,11 @@ Just make a PR to `tiles.ts`:
 - `freeSquares` is a smaller number of extremely-common events that form the pool for the free center square
 
 You can do that [right from the Github web UI](https://github.com/michaelsanford/Office-Bingo/blob/master/src/app/tiles.ts)!
+
+## Local Development
+
+```
+git clone https://github.com/michaelsanford/Office-Bingo.git
+cd Office-Bingo
+ng serve
+```
