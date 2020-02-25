@@ -1,5 +1,7 @@
 # Office-Bingo
 
+:video_game: :point_right: [**Play here!**](https://michaelsanford.com/Office-Bingo/)
+
 ![Homer Simpson: 'Bingo? That's my favourite game!'](https://media.giphy.com/media/3o6Mb3UCn0FSwjCorm/giphy.gif)
 
 ## Cool Features
