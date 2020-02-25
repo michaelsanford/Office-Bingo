@@ -1,10 +1,8 @@
-<article>
   <div class="board">
     <div class="row" *ngFor="let row of grid; let r = index">
       <div class="cell" *ngFor="let cell of row; let c = index" 
-           [class.awarded]="awarded(r,c)" (click)="toggle(r,c)">
+          [class.awarded]="awarded(r,c)" (click)="toggle(r,c)">
         {{cell}}
       </div>
     </div>
   </div>
-</article>

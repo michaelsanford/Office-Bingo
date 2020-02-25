@@ -1,17 +1,23 @@
 <div class="container">
-  <section class="hero" [class.is-info]="bannerType === 'info'" [class.is-primary]="bannerType === 'primary'"
-    [class.is-success]="bannerType === 'success'" [class.is-warning]="bannerType === 'warning'">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">
-          Office Bingo
-        </h1>
-        <h2 class="subtitle">
-          Good luck!
-        </h2>
+  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <h1 class="navbar-item title">
+        Office Bingo!
+      </h1>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <button class="button is-info" (click)="win()">
+              <strong>Instant Win!</strong>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </nav>
 
   <router-outlet></router-outlet>
 </div>

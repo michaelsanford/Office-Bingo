@@ -1,3 +1,14 @@
 .hero-body {
-    font-family: 'Fredoka One', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Anton', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar {
+  padding: 0 10px;
+  height: 20px;
+
+  @media only screen and (max-device-width : 1024px) {
+    & {
+        display: none;
+    }
+  }
 }

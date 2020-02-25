@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Office Bingo';
 
-  bannerType: "info" | "primary" | "success" | "warning" = "info";
+  win = () => alert("Pay-to-win office bingo? Really? 🤦‍♂️");
 }
