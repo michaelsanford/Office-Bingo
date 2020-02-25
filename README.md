@@ -41,3 +41,7 @@ git clone https://github.com/michaelsanford/Office-Bingo.git
 cd Office-Bingo
 ng serve
 ```
+
+## Colophon
+
+App icon by [monkik](https://www.flaticon.com/free-icon/bingo_1728620). 

@@ -25,6 +25,10 @@
       height: 10em;
       border: 1px solid black;
 
+      @media (prefers-color-scheme: dark) {
+        border: 1px dashed grey;
+      }
+
       cursor: pointer;
       user-select: none;
 
@@ -34,8 +38,7 @@
 
       @media only screen and (max-device-width : 1024px) {
         & {
-          max-height: 19vh;
-          min-height: 120px;
+          min-height: 19vh;
           font-family: 'Barlow Condensed', sans-serif;
           font-size: smaller;
           margin: 2px;

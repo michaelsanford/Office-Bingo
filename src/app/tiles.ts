@@ -46,6 +46,7 @@ export class Tiles {
     `"It shouldn't take that long"`,
     `Someone repeats a mistake for the 3rd time`,
     `Discover more Acceptance Criteria during briefing`,
+    `Defending lack of common sense as lack of spec`,
   ];
 
   private freeSquares = [
