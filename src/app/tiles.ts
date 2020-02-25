@@ -47,6 +47,9 @@ export class Tiles {
     `Someone repeats a mistake for the 3rd time`,
     `Discover more Acceptance Criteria during briefing`,
     `Defending lack of common sense as lack of spec`,
+    `"Is it lunch yet?"`,
+    `"Oh look at the time"`,
+    `"That wasn't in the acceptance criteria"`,
   ];
 
   private freeSquares = [
