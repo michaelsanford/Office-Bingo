@@ -1,29 +1,29 @@
 # Office-Bingo
 
-Play office bingo and win. Works relatively well on mobile.
+![Homer Simpson: 'Bingo? That's my favourite game!'](https://media.giphy.com/media/3o6Mb3UCn0FSwjCorm/giphy.gif)
 
-What do you win? You'll have to play to see.
+## Cool Features
 
-## Game
+- Full mobile support,
+- Still works well on Desktop,
+- Uses viewport units so (hopefully, if your phone is big enough) it'll fit perfectly
+- Has a `manifest.json` so can Add to Homescreen as an app
+- Automatically detects your OS Dark Mode and adapts the board to match. Works on Android, Windows, macOS.
 
-There is a long, static list of phrases that form the Common tiles. Every new game, that list is
-subjected to a [Schwartzian transform](https://en.wikipedia.org/wiki/Schwartzian_transform), and then
+## Gameplay
+
+On load, a list of "common tiles" is subjected to a [Schwartzian transform](https://en.wikipedia.org/wiki/Schwartzian_transform) and then
 the first 25 items are assigned to the playing grid.
 
 Then, the center tile is chosen at random from the shorter Free Square list.
 
-Clicking a tile activates it. Tapping it again deactivates it, to account for goal-driven maniacs
+Clicking/tapping a tile activates it. Tapping it again deactivates it, to account for goal-driven maniacs
 who will stop at nothing to trounce the competition, only to later realize it's only office bingo and regret
 their zeal.
 
+Refresh the board to generate a new one.
+
 I considered adding win detection, but ... _shuffles deck_ `OUT OF SCOPE`.
-
-## Save game
-
-The current state of your game will be saved in `LocalStorage`. I do have plans to implement board
-sharing via matrix URL.
-
-Paradoxically, _loading_ a shared board is implemented, but _saving_ the game to a URL is not.
 
 ## Adding Phrases
 
@@ -44,4 +44,4 @@ ng serve
 
 ## Colophon
 
-App icon by [monkik](https://www.flaticon.com/free-icon/bingo_1728620). 
+App icon by [monkik](https://www.flaticon.com/free-icon/bingo_1728620).
