@@ -3,11 +3,11 @@
 
 @import "bulma/sass/utilities/_all.sass";
 
-@media (prefers-color-scheme: dark) {
-    body {
-        color: white;
+@media only screen and (prefers-color-scheme: dark) {
+    html {
+        body {
+            color: white;
+        }
         background: black;      
     }
-
-    
 }

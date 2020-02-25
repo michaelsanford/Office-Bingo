@@ -24,16 +24,13 @@
       width: 19%;
       height: 10em;
       border: 1px solid black;
-
-      @media (prefers-color-scheme: dark) {
-        border: 1px dashed grey;
-      }
-
       cursor: pointer;
       user-select: none;
 
       &.awarded {
         background-color: yellow;
+        transition: background-color 0.8s ease-in;
+        transition: color 0.5s ease-in-out;
       }
 
       @media only screen and (max-device-width : 1024px) {
@@ -44,6 +41,14 @@
           margin: 2px;
           padding: 5px;
           width: 18%vw;
+        }
+      }
+
+      @media only screen and (prefers-color-scheme: dark) {
+        border: 1px dashed grey;
+
+        &.awarded {
+          color: black;
         }
       }
     }
