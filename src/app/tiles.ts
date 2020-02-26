@@ -50,6 +50,10 @@ export class Tiles {
     `"Is it lunch yet?"`,
     `"Oh look at the time"`,
     `"That wasn't in the acceptance criteria"`,
+    `"I don't know how to do that"`,
+    `You're interrupted while speaking`,
+    `Someone complains about a legacy system`,
+    `Question interrupted by a premature answer`,
   ];
 
   private freeSquares = [
