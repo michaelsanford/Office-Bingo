@@ -128,6 +128,9 @@
           }
         }
       }
-    }},
-  "defaultProject": "Office-Bingo"
+    }
+  },
+  "cli": {
+    "analytics": "e9242698-4d18-4802-8e56-663ffd43588d"
+  }
 }
