@@ -1,6 +1,4 @@
-import {
-  Injectable
-} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -64,7 +62,7 @@ export class Tiles {
     `Get a coffee`,
   ];
 
-  assemble = (saveGame ? : number[]) => {
+  assemble = (saveGame?: number[]): string[][] => {
     let vector: string[];
 
     if (!saveGame) {
@@ -79,8 +77,8 @@ export class Tiles {
   };
 
   validSaveGame = (vector: number[]): boolean =>
-    vector.length === 25 && // Grid size
-    vector[12] <= this.freeSquares.length && // Center square
+    vector.length === 25 &&
+    vector[12] <= this.freeSquares.length &&
     vector.every(i => i <= this.commonSquares.length - 1);
 
   static gridify = (vector: string[]): string[][] => [
@@ -91,10 +89,10 @@ export class Tiles {
     [vector[20], vector[21], vector[22], vector[23], vector[24]]
   ];
 
-  static randomElement = (vector: string[]) => vector[Math.floor(Math.random() * vector.length)];
+  static randomElement = (vector: string[]): string => 
+    vector[Math.floor(Math.random() * vector.length)];
 
-  // Implementation of https://en.wikipedia.org/wiki/Schwartzian_transform
-  static shuffle = (vector: string[]) => vector
+  static shuffle = (vector: string[]): string[] => vector
     .map((a: string) => ({
       sort: Math.random(),
       value: a

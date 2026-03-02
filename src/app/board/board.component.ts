@@ -1,52 +1,32 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
-import {
-  Tiles
-} from '../tiles';
-import {
-  RouterStateSnapshot,
-  ActivatedRoute,
-  Params,
-  Router
-} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Tiles } from '../tiles';
 
 @Component({
   selector: 'app-board',
+  imports: [CommonModule],
   templateUrl: './board.component.html',
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit {
+  grid: string[][] = [];
+  tracker: string[] = ["2-2"];
 
-  grid: string[][];
-  tracker: string[] = ["2-2"]; // 2-2 is the free center
-  saveVector: number[];
-
-  constructor(private tiles: Tiles, private route: ActivatedRoute, private router: Router) {}
+  constructor(private tiles: Tiles) {}
 
   ngOnInit(): void {
-    // TODO (redo?)
-    // this.route.params.subscribe((params: Params) => {
-    //   if (params.sg) {
-    //     this.saveVector = params.sg.split(",");
-    //     if (!this.tiles.validSaveGame(this.saveVector)) {
-    //       console.error("Corrupted save game! 😭 I'll just generate you a new board...");
-    //       this.grid = this.tiles.assemble();
-    //     } else {
-    //       this.grid = this.tiles.assemble(this.saveVector);  
-    //     }
-    //   } else {
-    //     this.grid =  this.tiles.assemble();
-    //   }
-    // });
     this.grid = this.tiles.assemble();
   }
 
-  toggle = (row: number, cell: number) =>
-  this.tracker.includes(`${row}-${cell}`) && `${row}-${cell}` !== "2-2" ?
-  this.tracker = this.tracker.filter(e => e !== `${row}-${cell}`) :
-    this.tracker.push(`${row}-${cell}`);
+  toggle = (row: number, cell: number): void => {
+    const key = `${row}-${cell}`;
+    if (this.tracker.includes(key) && key !== "2-2") {
+      this.tracker = this.tracker.filter(e => e !== key);
+    } else {
+      this.tracker.push(key);
+    }
+  };
 
-  awarded = (row: number, cell: number) => this.tracker.includes(`${row}-${cell}`);
+  awarded = (row: number, cell: number): boolean => 
+    this.tracker.includes(`${row}-${cell}`);
 }
