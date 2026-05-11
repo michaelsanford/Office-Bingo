@@ -1,7 +1,7 @@
 {
     "name": "Office Bingo",
     "short_name": "Office Bingo",
-    "description": "Play a fun game ",
+    "description": "Play a fun game of office bingo!",
     "icons": [{
       "src": "assets/icon-128.png",
         "sizes": "128x128",

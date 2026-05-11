@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed&family=Ubuntu&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background: black;
+  }
+  body {
+    color: white;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  height: 40px;
+  font-family: 'Anton', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .navbar {
+    display: none;
+  }
+}
+
+.navbar-title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.btn-win {
+  padding: 5px 12px;
+  background-color: #3273dc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-win:hover {
+  background-color: #2160c4;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Ubuntu', 'Lucida Sans', sans-serif;
+  font-size: 1.3em;
+  margin: 5px;
+  padding: 30px;
+  width: 19%;
+  height: 10em;
+  border: 1px solid black;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell.awarded {
+  background-color: yellow;
+  transition: background-color 0.8s ease-in, color 0.5s ease-in-out;
+}
+
+.cell.bingo {
+  background-color: limegreen;
+  transition: background-color 0.3s ease-in;
+}
+
+#bingo-banner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.88);
+  color: gold;
+  font-family: 'Anton', 'Segoe UI', sans-serif;
+  font-size: 6rem;
+  padding: 30px 60px;
+  border-radius: 12px;
+  z-index: 100;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+}
+
+.row:nth-child(3) .cell:nth-child(3):not(.bingo) {
+  background-color: hotpink;
+}
+
+@media only screen and (max-device-width: 1024px) {
+  .cell {
+    min-height: 19vh;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: smaller;
+    margin: 2px;
+    padding: 5px;
+    width: 18vw;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .cell {
+    border: 1px dashed grey;
+  }
+  .cell.awarded,
+  .cell.bingo {
+    color: black;
+  }
+}
